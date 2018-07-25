@@ -1,9 +1,17 @@
-## IMIresist_vs_TEMPtol
+## `IMIresist_vs_TEMPtol`
 This suite of R scripts allows to replicate the set of analysis proposed in Fournier-Level et al. (2018, submitted)
+
 # Dependencies:
 
-The fo
-- 
+The following R packages need to be install to exectute the scripts
+- lme4
+- vegan
+- fields
+- raster
+- plotrix
+
+The GNU parallel package was extensively used to parallelise computation [O. Tange (2011): GNU Parallel - The Command-Line Power Tool,
+;login: The USENIX Magazine, February 2011:42-47.]
 
 # Content:
 
