@@ -7,6 +7,8 @@ The scripts require to first source and unzip the data archive that can be found
 
 The following R packages need to be installed to execute the scripts:
 - lme4
+- broom
+- ggplot2
 - vegan
 - fields
 - raster
@@ -45,7 +47,9 @@ The GNU parallel package was extensively used to parallelise computation [O. Tan
   
 - **pHMM_MonteCarloAnalysis.r and pHMM_Ancestral_MonteCarloAnalysis.r**:
   Rscripts used to perform the MonteCarlo simulation testing the enrichment for candidate genes among the most intensely or least intensely (when resistance is ancestral) selected loci.
-  It uses as argument the number of GWAS for which a gene should be shown as associated to be included in the candiadate gene list (eg: 3 if a given gene is to be identified in 3 GWAS) and returns an RData archive with the observed and the permuted (1000 distinct permutations by default that can be modified in line 53).
+  It uses as arguments k (sensitivity parameter, in our analysis k=.000001) and the number of GWAS for which a gene should be shown as associated to be included in the candiadate gene list (eg: 3 if a given gene is to be identified in 3 GWAS) 
+  example: `<Rscript pHMM_MonteCarloAnalysis.r 0.000001 3>`
+  It returns an RData archive with the observed and the permuted (1000 distinct permutations by default that can be modified in line 53).
 
  - **Functional_Analysis.r**:
   Rscript used to analyse the results from the mutant/deletion vs wildtype comparisons. It generates barplots for the parwise comparison between pairs of lines and a box-and-whisker plot for the overall effect of a specific gene disruption.
