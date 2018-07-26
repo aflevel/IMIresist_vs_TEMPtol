@@ -1,9 +1,9 @@
 <h1 align="center">IMIresist_vs_TEMPtol</h1>
 This suite of R scripts allows to replicate the set of analysis proposed in Fournier-Level et al. (2018, submitted)
 
-## Usage and Dependencies:
+## Installation Usage and Dependencies:
 The scripts require to first source and unzip the data archive that can be found here: 
-The following R packages need to be install to exectute the scripts
+The following R packages need to be installed to exectute the scripts:
 - lme4
 - vegan
 - fields
@@ -24,4 +24,11 @@ The GNU parallel package was extensively used to parallelise computation [O. Tan
 - **Phenotype_Analysis.r**:
   Rscript used to perform the linear modelling of the phenotype variation in longevity in response to imidacloprid and temperature.
   It returns a serie of tests for the effect of the continent, temperature and precipitation regime at the location of origin on longevity and poymorphism. It also plots the cumulative distribution of time-to-death for each assay (stored in the Pheno_data directory), the distribution of time-to-death for the entire experiment and the population and line effect on time-to-death.
-  Alternatively, lines 46 64-66 and 72 can be commented out to perform a maximum likelihood estimation of mean, std dev. minimun and maximum for the insecticide data only (no controls) to return the pheno.py design files required tfor he GWAlpha association analysis.
+  Alternatively, lines 46 64-66 and 72 can be commented out to perform a maximum likelihood estimation of mean, std dev. minimun and maximum for the insecticide data only (no controls) to return the pheno.py design files required tfor he GWAlpha association analysis (https://github.com/aflevel/GWAlpha).
+
+- **Phenotype_Analysis.r**:
+  Rscript used to estimate the distribution of coverage in every sequencing library. The initial coverage estimation was made by windows of 500bp using the pysamstats package (https://github.com/alimanfoo/pysamstats). 
+  It returns a LibMedCov file; for the GWAS analysis using the GWAlpha package (https://github.com/aflevel/GWAlpha), we only retained the genomic regions that showed a coverage within the interquartile distribution of each pool (q25).
+
+- **Phenotype_Analysis.r**:
+  Rscript used to  
