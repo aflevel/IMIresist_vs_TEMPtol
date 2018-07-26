@@ -48,7 +48,9 @@ The GNU parallel package was extensively used to parallelise computation [O. Tan
 - **pHMM_MonteCarloAnalysis.r and pHMM_Ancestral_MonteCarloAnalysis.r**:
   Rscripts used to perform the MonteCarlo simulation testing the enrichment for candidate genes among the most intensely or least intensely (when resistance is ancestral) selected loci.
   It uses as arguments k (sensitivity parameter, in our analysis k=.000001) and the number of GWAS for which a gene should be shown as associated to be included in the candiadate gene list (eg: 3 if a given gene is to be identified in 3 GWAS) 
-  example: `<Rscript pHMM_MonteCarloAnalysis.r 0.000001 3>`
+  
+  example: `Rscript pHMM_MonteCarloAnalysis.r 0.000001 3`
+  
   It returns an RData archive with the observed and the permuted (1000 distinct permutations by default that can be modified in line 53).
 
  - **Functional_Analysis.r**:
