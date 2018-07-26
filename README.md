@@ -28,7 +28,7 @@ The GNU parallel package was extensively used to parallelise computation [O. Tan
   It returns a serie of tests for the effect of the continent, temperature and precipitation regime at the location of origin on time-to-death and genomic poymorphism. It also plots the cumulative distribution of time-to-death for each assay (stored in the Pheno_data directory), the distribution of time-to-death for the entire experiment and the population and line effect on time-to-death.
   Alternatively, lines 46 64-66 and 72 can be commented out to perform a maximum likelihood estimation of mean, std dev. minimun and maximum time-to-death for the insecticide data only (no controls) and return the pheno.py design files required for the GWAlpha genome-wide association analysis (https://github.com/aflevel/GWAlpha).
 
-- **Phenotype_Analysis.r**:
+- **CoverageEstimation.r**:
   Rscript used to estimate the distribution of coverage for every sequencing library. The coverage estimation was made by windows of 500bp using the pysamstats package (https://github.com/alimanfoo/pysamstats). 
   It returns a LibMedCov file; for the GWAS analysis using the GWAlpha package (https://github.com/aflevel/GWAlpha), this data was used to only retain the genomic regions that showed a coverage within the interquartile distribution of each pool (q25).
 
