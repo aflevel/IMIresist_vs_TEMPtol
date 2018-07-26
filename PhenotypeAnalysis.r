@@ -4,7 +4,7 @@ options(warn=-1)
 #
 #                  This R script allows to replicate the trait analysis proposed in Fourneir-Level el al. (2018, submitted)
 #
-# - It requires the lme4, FactoMineR and plotrix packages to be installed to perform the mixed-linear modelling
+# - It requires the lme4, broom, FactoMineR and plotrix packages to be installed to perform the mixed-linear modelling
 # - The input data can be sourced at the following URL:  
 # - The input data folder should be located in the R working directory without altering the folder names or structure
 # -lines 46 64-66 and 72 can be commented out to perform a maximum likelihood estimation of mean, std dev. minimun and maximum for the insecticide data only (no controls) that is required for the GWAlpha association analysis
