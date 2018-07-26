@@ -1,8 +1,10 @@
 <h1 align="center">IMIresist_vs_TEMPtol</h1>
 This suite of R scripts allows to replicate the set of analysis proposed in Fournier-Level et al. (2018, submitted)
+If you require some futher support or information please send an email to Alex Fournier-Level (afournier@unimelb.edu.au)
 
 ## Installation Usage and Dependencies:
-The scripts require to first source and unzip the data archive that can be found here: 
+The scripts require to first source and unzip the data archive that can be found here: **<not public yet, please email afournier@unimelb.edu.au>**
+
 The following R packages need to be installed to exectute the scripts:
 - lme4
 - vegan
@@ -39,10 +41,11 @@ The GNU parallel package was extensively used to parallelise computation [O. Tan
  - **PopGen_Analysis.r**:
   Rscript used to analyse the pattern of population genetic diversity within and among populations.
   It prints a chi-squared test of whether the set of alleles at candidate genes associated with resistance in each GWAS are mostly ancestral or derived states.
-  It returns plots showing the level of genetic differentiation along the genome for the set of 16 populations (Fst estimated using the Popoolation package: https://sourceforge.net/p/popoolation2/wiki/Main/) together with the contribution of georgraphic and climatic factor in this differentiation. It also returns the position and strength of putative selective sweeps (estimated using a Hidden Markov Model impelemented in Pool-HMM: https://forge-dga.jouy.inra.fr/projects/pool-hmm). Finally it plots
+  It returns plots showing the level of genetic differentiation along the genome for the set of 16 populations (Fst estimated using the Popoolation package: https://sourceforge.net/p/popoolation2/wiki/Main/) together with the contribution of georgraphic and climatic factor in this differentiation. It also returns the position and strength of putative selective sweeps (estimated using a Hidden Markov Model impelemented in Pool-HMM: https://forge-dga.jouy.inra.fr/projects/pool-hmm). Finally it plots the results of the MonteCralo simulations testing that the pattern of differentiation and selction at insecticide resistance candidate loci in not compatible with a randomness or neutrality.
   
 - **pHMM_MonteCarloAnalysis.r and pHMM_Ancestral_MonteCarloAnalysis.r**:
   Rscripts used to perform the MonteCarlo simulation testing the enrichment in candidate genes among the most intensely or least intensely (when resistance is ancestral) selected loci.
+  It uses as argument the number of GWAS for which a gene should be shown as associated to be included in the candiadate gene list and returns an RData archive with the observed and the permuted (1000 distinct permutations by default that can be modified in line 53).
 
  - **Functional_Analysis.r**:
   Rscript used to analyse the results from the mutant/deletion vs wildtype comparisons. It generates barplots for the parwise comparison between pairs of lines and a box-and-whisker plot for the overall effect of a specific gene disruption.
