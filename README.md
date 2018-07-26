@@ -30,5 +30,14 @@ The GNU parallel package was extensively used to parallelise computation [O. Tan
   Rscript used to estimate the distribution of coverage in every sequencing library. The initial coverage estimation was made by windows of 500bp using the pysamstats package (https://github.com/alimanfoo/pysamstats). 
   It returns a LibMedCov file; for the GWAS analysis using the GWAlpha package (https://github.com/aflevel/GWAlpha), we only retained the genomic regions that showed a coverage within the interquartile distribution of each pool (q25).
 
-- **Phenotype_Analysis.r**:
-  Rscript used to  
+- **GWAS_Analysis.r**:
+  Rscript used to visualise the GWAS analysis for time-to-death exposed to 1000ppm imidacloprid at either 20°C or 30°C performed on SNP+InDels, Chromosomal Inversion, Transposable Elements and Copy Number Variation.
+  It generates separate plots for the SNP/Inv/TE and for the CNV association. It also generates an RData archive containing the list of candidate genes for all associations and a GWAlist_dm5.57.txt files for the candiadte genes of the SNP/Inv/TE association tests only. If Graph_dia in line 17 is True, diagnostic plots for the distribution of the test statistics and effect of coverage on associations are generated.
+  It also prints out a table of the association between the abundance of microbes or endosymbionts of Drosophila and time-to-death.
+  Finally it generated a plot of the density of candidate genes along the genome.
+ 
+ - **GWAS_Analysis.r**:
+  Rscript used to
+  
+- **GWAS_Analysis.r**:
+  Rscript used to 
