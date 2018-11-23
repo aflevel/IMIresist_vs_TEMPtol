@@ -15,7 +15,7 @@ The following R packages need to be installed to execute the scripts:
 - plotrix
 - FactoMineR
 
-The scripts can then be executed using an Rscript command from the directory that was unpacked or through the R GUI having set the working directory to were the archive was unpacked.
+The scripts can then be executed using an Rscript command from the directory that was unpacked or through the R GUI having set the working directory to were the data archive was unpacked.
 
 The GNU parallel package was extensively used to parallelise computation [O. Tange (2011): GNU Parallel - The Command-Line Power Tool,login: The USENIX Magazine, February 2011:42-47.]
 
@@ -43,7 +43,7 @@ The GNU parallel package was extensively used to parallelise computation [O. Tan
  - **PopGen_Analysis.r**:
   Rscript used to analyse the pattern of population genetic diversity within and among populations.
   It prints a chi-squared test of whether the set of alleles at candidate genes associated with resistance in each GWAS are mostly ancestral or derived states.
-  It returns plots showing the level of genetic differentiation along the genome for the set of 16 populations (Fst estimated using the Popoolation package: https://sourceforge.net/p/popoolation2/wiki/Main/) together with the contribution of georgraphic and climatic factor in this differentiation. It also returns the position and strength of putative selective sweeps (estimated using a Hidden Markov Model impelemented in Pool-HMM: https://forge-dga.jouy.inra.fr/projects/pool-hmm). Finally it plots the results of the MonteCralo simulations testing that the pattern of differentiation and selction at insecticide resistance candidate loci is not compatible with randomness or neutrality.
+  It returns plots showing the level of genetic differentiation along the genome for the set of 16 populations (Fst estimated using the Popoolation package: https://sourceforge.net/p/popoolation2/wiki/Main/) together with the contribution of georgraphic and climatic factor in this differentiation. It also returns the position and strength of putative selective sweeps (estimated using a Hidden Markov Model impelemented in Pool-HMM: https://forge-dga.jouy.inra.fr/projects/pool-hmm). Finally it plots the results of the Monte Carlo simulations testing that the pattern of differentiation and selction at insecticide resistance candidate loci is not compatible with randomness or neutrality.
   
 - **pHMM_MonteCarloAnalysis.r and pHMM_Ancestral_MonteCarloAnalysis.r**:
   Rscripts used to perform the MonteCarlo simulation testing the enrichment for candidate genes among the most intensely or least intensely (when resistance is ancestral) selected loci.
