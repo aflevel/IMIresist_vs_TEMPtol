@@ -1,5 +1,5 @@
 <h1 align="center">IMIresist_vs_TEMPtol</h1>
-This suite of R scripts allows to replicate the analysis proposed in Fournier-Level et al. (2019) Nat. Eco. & Evo.
+This suite of R scripts allows to replicate the analysis proposed in Fournier-Level et al. (2019) Nat. Eco. & Evo. DOI:10.1038/s41559-019-0837-y
 If you require some futher support or information please email Alex Fournier-Level (afournier@unimelb.edu.au)
 
 ## Installation Usage and Dependencies:
